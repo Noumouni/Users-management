@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json());
 
 app.get('/',(req, res) => {
-  res.json(body:{
+  res.json({
     message : 'Users Management API'
     });
   
