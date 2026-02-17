@@ -1,8 +1,8 @@
 
-
 import express from 'express'
+import dotenv from 'dotenv'
 
-const app = express()
+const app = express();
 app.use(express.json());
 
 app.get('/',(req, res) => {
@@ -11,14 +11,12 @@ app.get('/',(req, res) => {
     });
   
 });
-
+const port =process.env.PORT || 3000 ;
 app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
+  console.log('Server is running on http://localhost:$(port)')
 })
 
 
 
 
 
-// Nous avons crée un serveur qui ecoute sur le port 3000
-//importer  http Api node qui va nous aider a crée un server
